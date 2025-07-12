@@ -53,10 +53,11 @@ function listenForPosts() {
         const postCard = document.createElement("div");
         
         postCard.className = "post-card";
-        postCard.innerHTML = `
+        postCard.innerHTML = `<div class="top"><div class="profilepic"></div>
                 <div class="profile" onclick="window.open('${
                   post.socialLink || "#"
-                }', '_blank')">${post.name || "Unknown"}</div>
+                }', '_blank')">${post.name || "Unknown"} </div></div>
+
                 <div class="content">${post.suggestion || ""}</div>
                
             `;
