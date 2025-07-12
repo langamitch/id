@@ -58,9 +58,9 @@ function listenForPosts() {
                   post.socialLink || "#"
                 }', '_blank')">${post.name || "Unknown"}</div>
                 <div class="content">${post.suggestion || ""}</div>
-                <div class="empty"></div>
+               
             `;
-            
+
         postContainer.appendChild(postCard);
       });
     },
