@@ -16,7 +16,7 @@ const firebaseConfig = {
   projectId: "website-6a5f1",
   storageBucket: "website-6a5f1.firebasestorage.app",
   messagingSenderId: "510903945172",
-  appId: "1:510903945172:web:a5f5120db75c938721f841",
+  appId: "1:510903945172:web:a5f5120db75c938721f841"
 };
 
 // --- Global Variables ---
@@ -51,6 +51,7 @@ function listenForPosts() {
       snapshot.forEach((doc) => {
         const post = doc.data();
         const postCard = document.createElement("div");
+        
         postCard.className = "post-card";
         postCard.innerHTML = `
                 <div class="profile" onclick="window.open('${
@@ -59,6 +60,7 @@ function listenForPosts() {
                 <div class="content">${post.suggestion || ""}</div>
                 <div class="empty"></div>
             `;
+            
         postContainer.appendChild(postCard);
       });
     },

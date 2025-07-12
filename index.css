@@ -140,10 +140,11 @@ input, button {
 .content {
     background-color: transparent;
     padding: 10px;
+    font-size: 13px;
 }
 
 .empty {
-    background-color: ;
+  
     padding: 10px;
     height: 50px;
 }
