@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Inter font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<title>App-Ideas Library – Hero</title>
+
+<style>
+/* ========== Base ========== */
+:root {
+  --clr-bg: #000;        /* pure black */
+  --clr-text: #fff;      /* white text */
+  --clr-muted: #888;     /* muted gray for sub-copy */
+  --clr-glass: rgba(255,255,255,.08); /* frosted glass btn */
+  --btn-hover: rgba(255,255,255,.16);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+/* ========== Hero Wrapper ========== */
+.hero {
+  min-height: 100vh;                /* full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1.5rem;           /* mobile side padding */
+  text-align: center;
+}
+
+/* ========== Headline ========== */
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw + .5rem, 6rem); /* fluid size */
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* ========== Sub-headline ========== */
+.hero p {
+  max-width: 38rem;
+  margin: 2rem 0 0;
+  font-size: clamp(1rem, 2vw + .1rem, 1.375rem);
+  line-height: 1.4;
+  color: var(--clr-muted);
+}
+
+/* ========== Button Row ========== */
+.btn-row {
+  margin-top: 3.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Primary pill button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .9rem 1.75rem;
+  border: none;
+  border-radius: 9999px;
+  background: var(--clr-glass);
+  backdrop-filter: blur(6px);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  cursor: pointer;
+  transition: background .25s ease;
+}
+.btn-primary:hover { background: var(--btn-hover); }
+
+/* Circular icon button */
+.btn-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--clr-glass);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background .25s ease;
+}
+.btn-icon:hover { background: var(--btn-hover); }
+
+/* Remove default button focus outline then add custom */
+button:focus { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* SVGs should inherit currentColor */
+svg { pointer-events: none; }
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+
+  <!-- Headline -->
+  <h1>
+    The biggest community <br>
+    for sharing app ideas
+  </h1>
+
+  <!-- Sub-headline -->
+  <p>
+    Discover concepts from makers worldwide, get feedback, or
+    publish your own next-big-thing.
+  </p>
+
+  <!-- Call-to-action row -->
+  <div class="btn-row">
+
+    <!-- Primary pill -->
+    <button class="btn-primary" onclick="location.href='#submit'">
+      <!-- Light-bulb icon (outline) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18h6"/>
+        <path d="M10 22h4"/>
+        <path d="M12 2a7 7 0 0 0-4 12.88V17h8v-2.12A7 7 0 0 0 12 2z"/>
+      </svg>
+      Submit your idea
+    </button>
+
+    <!-- Browse grid icon button -->
+    <button class="btn-icon" onclick="location.href='#browse'" aria-label="Browse ideas">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M1 2a1 1 0 0 1 1-1h3v4H1V2zm5 0h4v4H6V2zm5 0h3a1 1 0 0 1 1 1v3h-4V2zM1 6h4v4H1V6zm5 0h4v4H6V6zm5 0h4v4h-4V6zM1 11h4v3a1 1 0 0 1-1 1H1v-4zm5 0h4v4H6v-4zm5 0h3a1 1 0 0 1 1 1v3h-4v-4z"/>
+      </svg>
+    </button>
+
+    <!-- X / Twitter icon button -->
+    <button class="btn-icon" onclick="window.open('https://x.com/YourProfile','_blank')" aria-label="Follow us on X">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22 5.75a8.56 8.56 0 0 1-2.48.68 4.27 4.27 0 0 0 1.87-2.36 8.56 8.56 0 0 1-2.72 1.04A4.23 4.23 0 0 0 16.11 4a4.24 4.24 0 0 0-4.23 4.23c0 .33.04.66.1.97A12 12 0 0 1 3 4.9a4.22 4.22 0 0 0-.57 2.13 4.23 4.23 0 0 0 1.88 3.52 4.2 4.2 0 0 1-1.91-.53v.05A4.24 4.24 0 0 0 4.23 14a4.26 4.26 0 0 1-1.11.15c-.27 0-.55-.03-.81-.08a4.25 4.25 0 0 0 3.96 2.94A8.5 8.5 0 0 1 2 19.54 12 12 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68v-.53A8.35 8.35 0 0 0 22 5.75z"/>
+      </svg>
+    </button>
+
+  </div>
+
+</section>
+
+</body>
+</html>
