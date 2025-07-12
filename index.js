@@ -1,14 +1,13 @@
 // Firebase Configuration (Replace with your config)
-const firebaseConfig = {
-    apiKey: "your-api-key",
-    authDomain: "your-auth-domain",
-    databaseURL: "your-database-url",
-    projectId: "your-project-id",
-    storageBucket: "your-storage-bucket",
-    messagingSenderId: "your-messaging-sender-id",
-    appId: "your-app-id"
-};
-
+  const firebaseConfig = {
+    apiKey: "AIzaSyDb2cl7lsypR1ZoqHGD-mKhzN_lnDcyVEQ",
+    authDomain: "website-6a5f1.firebaseapp.com",
+    projectId: "website-6a5f1",
+    storageBucket: "website-6a5f1.firebasestorage.app",
+    messagingSenderId: "510903945172",
+    appId: "1:510903945172:web:a5f5120db75c938721f841"
+  };
+  
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const postsRef = database.ref('posts');
