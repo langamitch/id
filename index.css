@@ -26,6 +26,10 @@ nav {
     padding: 20px;
     background-color: #000;
 }
+nav p{
+    font-size: 20px;
+    font-weight: 500;
+}
 
 .search-icon {
     font-size: 24px;
@@ -92,7 +96,9 @@ form {
     flex-direction: column;
     gap: 10px;
 }
-
+input {
+    padding: 10px;
+}
 input, button {
     
     margin: 5px 0;
