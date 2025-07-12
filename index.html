@@ -5,64 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Suggestion App</title>
     <link rel="stylesheet" href="index.css">
-     <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
-<script type="module" src="script.js"></script>
 </head>
 <body>
     <nav>
         <p>LUCENT&trade;</p>
-        <div class="search-icon" onclick="toggleOverlay('search-overlay')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" "><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z" fill="currentColor"></path></svg></div>
+        <div class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z" fill="currentColor"></path></svg></div>
     </nav>
-<div  class="container">
-    <!-- Search Overlay -->
+<div class="container">
     <div id="search-overlay" class="overlay">
         <div class="overlay-content">
-            <span class="close-btn" onclick="toggleOverlay('search-overlay')">        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#000"
-        >
-          <path
-            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-          />
-        </svg></span>
-            <input type="text" id="search-input" placeholder="Search..." onkeyup="searchPosts()">
-            
-            
+            <span class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </span>
+            <input type="text" id="search-input" placeholder="Search...">
         </div>
     </div>
 
-    <!-- Form Overlay -->
     <div id="form-overlay" class="overlay">
         <div class="overlay-content">
-            <span class="close-btn" onclick="toggleOverlay('form-overlay')">×</span>
+            <span class="close-btn">×</span>
             <form id="suggestion-form">
                 <input style="height:50px;border-bottom: 2px solid rgb(217, 217, 217)" type="text" id="name" placeholder="Your Name" required>
-                <textarea style="max-height:120px; border: 2px solid rgb(217, 217, 217);    font-weight: 500;
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;" type="text" id="suggestion" placeholder="App Suggestion" required></textarea>
+                <textarea style="max-height:120px; border: 2px solid rgb(217, 217, 217); font-weight: 500; font-size: 16px; font-family: 'Inter', sans-serif;" id="suggestion" placeholder="App Suggestion" required></textarea>
                 <input style="height:50px;border-bottom: 2px solid rgb(217, 217, 217)" type="url" id="social-link" placeholder="Social Link" required>
                 <button class="sub" type="submit">Submit</button>
             </form>
         </div>
     </div>
 
-    <!-- Button to Open Form -->
-    <button onclick="toggleOverlay('form-overlay')" class="toggle">Add Suggestion</button>
+    <button class="toggle">Add Suggestion</button>
 
-    <!-- Post Container -->
     <div id="post-container" class="post-container"></div>
 
-    <!-- Search Results Container -->
     <div id="search-results" class="search-results"></div>
 </div>
-   
+      
+<script type="module" src="index.js"></script>
 </body>
 </html>
