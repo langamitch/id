@@ -78,11 +78,20 @@ nav p{
     font-size: 16px;
 }
 
-input:focus {
+input:focus,  {
     outline: none;
 }
+#suggestion-form input{
+    height: 50px;
+}
 
-
+.sub{
+    padding: 20px 17px 20px 15px;
+    border-radius:89px;
+    background-color:#000;
+    border:none;
+    color: #fff;
+}
 .close-btn {
     position: absolute;
     top: 10px;
@@ -98,9 +107,12 @@ form {
 }
 input {
     padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
 }
 input, button {
-    
+    font-weight: 500;
+    font-size: 16px;
     margin: 5px 0;
 }
 

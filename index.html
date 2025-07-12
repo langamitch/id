@@ -41,10 +41,12 @@
         <div class="overlay-content">
             <span class="close-btn" onclick="toggleOverlay('form-overlay')">×</span>
             <form id="suggestion-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="text" id="suggestion" placeholder="App Suggestion" required>
-                <input type="url" id="social-link" placeholder="Social Link" required>
-                <button type="submit">Submit</button>
+                <input style="height:30px;" type="text" id="name" placeholder="Your Name" required>
+                <textarea style="min-height:120px; border: 1px solid rgb(217, 217, 217);    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;" type="text" id="suggestion" placeholder="App Suggestion" required></textarea>
+                <input style="height:30px;" type="url" id="social-link" placeholder="Social Link" required>
+                <button class="sub" type="submit">Submit</button>
             </form>
         </div>
     </div>
