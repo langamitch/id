@@ -239,9 +239,9 @@ input, button {
 }
 
 .post-card {
-    width: 350px;
+    width: 100%;
     
-    
+    border: 1px solid var(--clr-muted);
   
     overflow: hidden;
 }
