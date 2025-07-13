@@ -230,11 +230,11 @@ input, button {
 .top{
   position:absolute;
   right: 20px;
+  text-transform: uppercase;
   color: var(--clr-muted);
   margin-bottom: 20px;
     display: flex-end;
     flex-direction: row;
-    
     font-size: 13px;
 }
 
@@ -242,6 +242,7 @@ input, button {
     background-color: #141414;
     padding: 10px;
     margin-top: 30px;
+    border-radius: 3px;
     font-size: 13px;
     font-weight: 400;
 }
