@@ -8,7 +8,6 @@ body {
 }#loading-indicator {
   /* --- Centering properties --- */
   margin-left: auto;
-  margin-right: auto;
 
   /* --- Your combined styles --- */
   text-align: center;
