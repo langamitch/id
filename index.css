@@ -250,7 +250,7 @@ input, button {
     cursor: pointer;
 }
 .profilepic{
-  
+  display: none;
     height: 30px;
     width:30px;
     background: var(--clr-muted);
@@ -258,13 +258,12 @@ input, button {
 }
 
 .top{
-  width:100%;
-  justify-content:space-between;
-  
+  position:absolute;
+  right: 20px;
   text-transform: uppercase;
   color: var(--clr-muted);
   margin-bottom: 20px;
-    display: flex;
+    display: flex-end;
     flex-direction: row;
     font-size: 13px;
 }
