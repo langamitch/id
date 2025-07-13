@@ -61,7 +61,11 @@ function listenForPosts() {
             <div class="profilepic"></div>
             <div class="profile">${post.name || "Unknown"}  <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M7 17h9.17L6 6.83 7.41 5.4 18.6 16.6V7H21v14H7z" fill="currentColor"/>
-      </svg> </div>
+      </svg>
+      <span class="material-symbols-outlined">
+arrow_outward
+</span>
+       </div>
           </div> 
   
 
