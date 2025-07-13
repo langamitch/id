@@ -202,15 +202,15 @@ input, button {
 .post-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding-top: 10px;
+    gap: 15px;
+    padding: 20px;
 }
 
 .post-card {
     width: 350px;
-    border: 1px solid #262626;
-    border-radius: 5px;
-    background: #141414;
+    
+    
+  
     overflow: hidden;
 }
 
@@ -240,6 +240,7 @@ input, button {
 .content {
     background-color: #141414;
     padding: 10px;
+    margin-top: 30px;
     font-size: 13px;
     font-weight: 400;
 }
