@@ -250,9 +250,9 @@ input, button {
     cursor: pointer;
 }
 .profilepic{
-  display:none;
-    height: 60px;
-    width: 60px;
+  
+    height: 30px;
+    width:30px;
     background: white;
     border-radius: 40px;
 }
