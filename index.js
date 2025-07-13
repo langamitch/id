@@ -131,7 +131,13 @@ function savePost(button, postId) {
   // 4️⃣  (Optional) Debug log
   console.log('Saved posts:', saved);
 }
-
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = JSON.parse(localStorage.getItem('savedPosts')) || [];
+  saved.forEach(id => {
+    const btn = document.querySelector(`[data-post-id="${id}"]`);
+    if (btn) btn.classList.add('saved');
+  });
+});
 
 
 function searchPosts() {
