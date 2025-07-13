@@ -87,10 +87,27 @@ function listenForPosts() {
     }
   );
 }
+/**
+ * Handles the click event for the like button.
+ * @param {HTMLElement} button - The button element that was clicked.
+ * @param {string} postId - The ID of the post to be liked.
+ */
+function likePost(button, postId) {
+  console.log("Liked post:", postId);
+  button.classList.toggle('active');
+  // TODO: Add your Firestore logic here to update the like count.
+}
 
-
-
-
+/**
+ * Handles the click event for the save button.
+ * @param {HTMLElement} button - The button element that was clicked.
+ *- @param {string} postId - The ID of the post to be saved.
+ */
+function savePost(button, postId) {
+  console.log("Saved post:", postId);
+  button.classList.toggle('saved');
+  // TODO: Add your Firestore logic here to add/remove the post from a user's saved list.
+}
 
 
 
