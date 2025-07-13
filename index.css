@@ -70,6 +70,7 @@ nav p{
   display: flex-end;
   align-items: center;
   margin-top: 5px;
+  flex-direction: row;
   
 }
 
