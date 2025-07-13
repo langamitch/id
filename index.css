@@ -253,17 +253,18 @@ input, button {
   
     height: 30px;
     width:30px;
-    background: white;
+    background: var(--clr-muted);
     border-radius: 40px;
 }
 
 .top{
-  position:absolute;
-  right: 20px;
+  width:100%;
+  justify-content:space-between;
+  
   text-transform: uppercase;
   color: var(--clr-muted);
   margin-bottom: 20px;
-    display: flex-end;
+    display: flex;
     flex-direction: row;
     font-size: 13px;
 }
