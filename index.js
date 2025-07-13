@@ -59,12 +59,9 @@ function listenForPosts() {
         postCard.innerHTML = `
           <div class="top" onclick="window.open('${post.socialLink || '#'}', '_blank')">
             <div class="profilepic"></div>
-            <div class="profile">${post.name || "Unknown"}  <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M7 17h9.17L6 6.83 7.41 5.4 18.6 16.6V7H21v14H7z" fill="currentColor"/>
-      </svg>
-      <span class="material-symbols-outlined">
-arrow_outward
-</span>
+            <div class="profile">${post.name || "Unknown"} <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+
+      
        </div>
           </div> 
   
