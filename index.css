@@ -6,15 +6,20 @@ body {
     color: #fff;
     font-weight: 500;
 }#loading-indicator {
+  /* --- Centering properties --- */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* --- Your combined styles --- */
+  width: fit-content;
   text-align: center;
-  justify-content: center;
-  
-  padding: 1rem;
-  font-family: 'Inter',sans-serif;
+  padding: 20px; /* Using the value from your second rule and fixed typo */
+  background: #fff;
+  font-family: 'Inter', sans-serif;
   color: #555;
-  font-size:13px;
-  width:fit-content;
+  font-size: 13px;
 }
+
 
 #loading-indicator p{
   paddding: 20px;
