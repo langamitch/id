@@ -13,6 +13,10 @@ body {
   font-size:13px;
 }
 
+#loading-indicator {
+  paddding: 20px;
+  background:#fff;}
+
 :root {
   --clr-bg: #000;        /* pure black */
   --clr-text: #fff;      /* white text */
