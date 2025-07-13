@@ -241,7 +241,7 @@ input, button {
 .post-card {
     width: 100%;
     
-    border: 1px solid #888;
+    
   
     overflow: hidden;
 }
@@ -286,7 +286,7 @@ input, button {
 }
 
 .search-results {
-    display: none;
+    display: block;
     padding: 20px;
     background-color: #f9f9f9;
     margin-top: 20px;
