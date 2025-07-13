@@ -215,8 +215,8 @@ input, button {
 }
 
 .profile {
-    background-color: #141414;
-    padding: 20px;
+    background-color: transparent;
+    padding: 10px;
     cursor: pointer;
 }
 .profilepic{
@@ -229,7 +229,8 @@ input, button {
 
 .top{
   position:absolute;
-  right: 10px;
+  right: 20px;
+  color: var(--clr-muted);
   margin-bottom: 20px;
     display: flex-end;
     flex-direction: row;
