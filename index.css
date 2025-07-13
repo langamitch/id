@@ -64,53 +64,52 @@ nav p{
 }
 
 .toggle:hover {
-    background-color: #333333;
-}/* Styling for the new action button section */
+    background-color: #333333;}
+    
+    /* Styling for the action button section */
 .post-actions {
-  display: flex-end;
-  align-items: center;
-  margin-top: 5px;
-  flex-direction: row;
-  
-}
-
-.action-group {
   display: flex;
-  gap: 8px; /* Adds space between like and dislike buttons */
+  justify-content: flex-end; /* This aligns buttons to the right */
+  align-items: center;
+  gap: 8px; /* This creates space between the buttons */
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #383838;
 }
 
 .action-btn {
   background: none;
   border: none;
   padding: 6px;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #888; /* Default color for icons */
+  color: #888;
   transition: all 0.2s ease-in-out;
 }
 
 .action-btn:hover {
   background-color: #3a3a3a;
-  color: #fff; /* White icon on hover */
+  color: #fff;
 }
 
 .action-btn:active {
-  transform: scale(0.92); /* Adds a nice press-down effect */
+  transform: scale(0.92);
 }
 
-/* Add this class with JS to show a button is selected */
+/* Add this class with JS to show a button is "liked" */
 .action-btn.active {
-    color: #5ea8ff; /* A nice blue for the active like/dislike */
+    color: #f44336;
 }
 
-/* Add this class with JS to show a post is saved */
+/* Add this class with JS to show a post is "saved" */
 .save-btn.saved {
-  color: #fccc2d; /* A gold color for the saved bookmark */
+  color: #fccc2d;
 }
 
-
+    
 .sort-section {
     text-align: center;
 }
