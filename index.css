@@ -21,7 +21,7 @@ body {
 
 #loading-indicator p{
   paddding: 20px;
-  background:#fff;}
+  background:#888;}
 
 :root {
   --clr-bg: #000;        /* pure black */
