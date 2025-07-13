@@ -44,25 +44,42 @@ function toggleOverlay(overlay) {
 }
 
 function listenForPosts() {
+  // Ensure postsRef and postContainer are defined in your actual code
   if (!postsRef || !postContainer) return;
+
+  const loadingIndicator = document.getElementById('loading-indicator');
+
+  // Show the loading indicator at the start
+  if (loadingIndicator) {
+    loadingIndicator.style.display = 'block';
+  }
+  postContainer.innerHTML = ""; // Clear previous posts
 
   onSnapshot(
     postsRef,
     (snapshot) => {
-      postContainer.innerHTML = ""; // Clear previous posts
+      // Hide the loading indicator once data is received
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
+      postContainer.innerHTML = ""; // Clear again to be safe
+
+      if (snapshot.empty) {
+        postContainer.innerHTML = "<p>No posts to display.</p>";
+        return;
+      }
+
       snapshot.forEach((doc) => {
         const post = doc.data();
-        const postId = doc.id; // Unique ID for the post
+        const postId = doc.id;
         const postCard = document.createElement("div");
-        
-      postCard.className = "post-card";
+
+        postCard.className = "post-card";
         postCard.innerHTML = `
           <div class="top" onclick="window.open('${post.socialLink || '#'}', '_blank')">
             <div class="profilepic"></div>
-            <div class="profile">${post.name || "Unknown"}
-   </div>
-          </div> 
-  
+            <div class="profile">${post.name || "Unknown"}</div>
+          </div>
 
           <div class="content">${post.suggestion || ""}</div>
 
@@ -81,8 +98,11 @@ function listenForPosts() {
               </svg>
             </button>
             
-            <button class="action-btn save-btn" onclick="window.open('${post.socialLink || '#'}', '_blank')" aria-label="Open link"><svg class="rotate-45" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M665.08-450H180v-60h485.08L437.23-737.85 480-780l300 300-300 300-42.77-42.15L665.08-450Z"/></svg></span>
-     </button>
+            <button class="action-btn save-btn" onclick="window.open('${post.socialLink || '#'}', '_blank')" aria-label="Open link">
+                <svg class="rotate-45" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                    <path d="M665.08-450H180v-60h485.08L437.23-737.85 480-780l300 300-300 300-42.77-42.15L665.08-450Z"/>
+                </svg>
+            </button>
           </div>
         `;
 
@@ -91,9 +111,15 @@ function listenForPosts() {
     },
     (error) => {
       console.error("Error fetching posts:", error);
+      // Also hide the loading indicator in case of an error
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
+      postContainer.innerHTML = "<p>Error loading posts. Please try again later.</p>";
     }
   );
 }
+
 
 /**
  * Handles the click event for the like button.
