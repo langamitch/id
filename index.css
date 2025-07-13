@@ -210,7 +210,7 @@ input, button {
     width: 350px;
     border: 1px solid #262626;
     border-radius: 5px;
-
+    background: #141414;
     overflow: hidden;
 }
 
@@ -228,10 +228,13 @@ input, button {
 }
 
 .top{
+  position:absolute;
     display: flex-end;
     flex-direction: row;
     
+    font-size: 13px;
 }
+
 .content {
     background-color: #141414;
     padding: 10px;
