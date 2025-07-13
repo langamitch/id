@@ -55,12 +55,20 @@ function listenForPosts() {
         const postId = doc.id; // Unique ID for the post
         const postCard = document.createElement("div");
         
-        postCard.className = "post-card";
-        postCard.innerHTML = `
-          <div class="top" onclick="window.open('${post.socialLink || '#'}', '_blank')">
-            <div class="profilepic"></div>
-            <div class="profile">${post.name || "Unknown"}</div>
-          </div>
+   postCard.className = "post-card";
+postCard.innerHTML = `
+  <div class="top" onclick="window.open('${post.socialLink || '#'}', '_blank')">
+    <div class="profilepic"></div>
+
+    <div class="profile">
+      ${post.name || "Unknown"}
+
+      <!-- slim “arrow-out” SVG -->
+      <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 17h9.17L6 6.83 7.41 5.4 18.6 16.6V7H21v14H7z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>`;
 
           <div class="content">${post.suggestion || ""}</div>
 
