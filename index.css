@@ -71,8 +71,7 @@ nav p{
   justify-content: space-between;
   align-items: center;
   margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid #383838; /* A subtle separator line */
+  padding-top: 12px;/* A subtle separator line */
 }
 
 .action-group {
