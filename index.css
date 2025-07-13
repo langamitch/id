@@ -46,11 +46,13 @@ nav p{
   padding: 0px 10px;
   }
   
-.right{
+.right .search-icon, .right .togglebtn{
   display: flex;
   flex-direction:  row;
   gap:10px;
+  align-items: center;
   }
+  
 .toggle {
     background-color: transparent;
     color: #000;
