@@ -76,16 +76,15 @@ nav p{
 }
 
 .action-btn {
-  background: none;
+  background: #141414;
   border: none;
   padding: 6px;
-  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #888;
-  transition: all 0.2s ease-in-out;
+  
 }
 
 .action-btn:hover {
