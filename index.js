@@ -89,17 +89,48 @@ function listenForPosts() {
 }
 
 /**
- * Handles the click event for the like button.
- * @param {HTMLElement} button - The button element that was clicked.
- * @param {string} postId - The ID of the post to be liked.
+ */**
+ * Toggle-likes a post for this browser (no sign-in required).
+ * @param {HTMLElement} button – The clicked <button>.
+ * @param {string}      postId – Firestore document ID.
  */
-function likePost(button, postId) {
-  console.log("Liked post:", postId);
-  button.classList.toggle('active');
-  // TODO: Add your Firestore logic here to update the like count.
-}
+async function likePost(button, postId) {
+  const STORAGE_KEY = "likedPosts";
+  const likedPosts  = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 
-/**
+  const alreadyLiked = likedPosts.includes(postId);
+  const postRef      = doc(db, "posts", postId);
+
+  try {
+    // 1️⃣  Atomically update the counter in Firestore
+    await updateDoc(postRef, {
+      likeCount: increment(alreadyLiked ? -1 : 1)
+    });
+
+    // 2️⃣  Update localStorage & UI
+    if (alreadyLiked) {
+      // user un-likes
+      const i = likedPosts.indexOf(postId);
+      likedPosts.splice(i, 1);
+      button.classList.remove("active");
+    } else {
+      // user likes
+      likedPosts.push(postId);
+      button.classList.add("active");
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(likedPosts));
+  } catch (err) {
+    console.error("Failed to update like:", err);
+    // optional: show toast / revert UI
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const liked = JSON.parse(localStorage.getItem("likedPosts")) || [];
+  liked.forEach(id => {
+    const btn = document.querySelector(`[data-post-id="${id}"]`);
+    if (btn) btn.classList.add("active");
+  });
+});
  /**
  * Handles the click event for the save button.
  * Saves (or removes) the post ID in localStorage under the key "savedPosts".
