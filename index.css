@@ -7,10 +7,10 @@ body {
     font-weight: 500;
 }#loading-indicator {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   font-family: 'Inter',sans-serif;
   color: #555;
-  background:#fff;
+  font-size:13px;
 }
 
 :root {
