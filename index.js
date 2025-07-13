@@ -100,14 +100,36 @@ function likePost(button, postId) {
 }
 
 /**
+ /**
  * Handles the click event for the save button.
+ * Saves (or removes) the post ID in localStorage under the key "savedPosts".
+ *
  * @param {HTMLElement} button - The button element that was clicked.
- *- @param {string} postId - The ID of the post to be saved.
+ * @param {string} postId      - The ID of the post to be toggled.
  */
 function savePost(button, postId) {
-  console.log("Saved post:", postId);
-  button.classList.toggle('saved');
-  // TODO: Add your Firestore logic here to add/remove the post from a user's saved list.
+  const STORAGE_KEY = 'savedPosts';
+
+  // 1️⃣  Get the current list from localStorage (defaults to empty array)
+  const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+  // 2️⃣  Toggle the post ID in the list
+  const index = saved.indexOf(postId);
+  if (index === -1) {
+    // Not saved yet → add it
+    saved.push(postId);
+    button.classList.add('saved');
+  } else {
+    // Already saved → remove it
+    saved.splice(index, 1);
+    button.classList.remove('saved');
+  }
+
+  // 3️⃣  Persist the updated list
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+
+  // 4️⃣  (Optional) Debug log
+  console.log('Saved posts:', saved);
 }
 
 
