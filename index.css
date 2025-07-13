@@ -208,7 +208,7 @@ input, button {
 
 .post-card {
     width: 350px;
-    border-bottom: 1px solid #262626;
+    border: 1px solid #262626;
     border-radius: 5px;
 
     overflow: hidden;
@@ -220,6 +220,7 @@ input, button {
     cursor: pointer;
 }
 .profilepic{
+  display:none;
     height: 60px;
     width: 60px;
     background: white;
@@ -227,14 +228,15 @@ input, button {
 }
 
 .top{
-    display: flex;
+    display: flex-end;
     flex-direction: row;
     
 }
 .content {
-    background-color: transparent;
-    padding: 0 0 30px 60px;
+    background-color: #141414;
+    padding: 10px;
     font-size: 13px;
+    font-weight: 400;
 }
 
 .empty {
