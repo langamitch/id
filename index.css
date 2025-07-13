@@ -215,8 +215,8 @@ input, button {
 }
 
 .profile {
-    background-color: transparent;
-    padding: 10px;
+    background-color: #141414;
+    padding: 20px;
     cursor: pointer;
 }
 .profilepic{
