@@ -67,11 +67,10 @@ nav p{
     background-color: #333333;
 }/* Styling for the new action button section */
 .post-actions {
-  display: flex;
-  justify-content: space-between;
+  display: flex-end;
   align-items: center;
-  margin-top: 12px;
-  padding-top: 12px;/* A subtle separator line */
+  margin-top: 5px;
+  
 }
 
 .action-group {
@@ -83,7 +82,6 @@ nav p{
   background: none;
   border: none;
   padding: 6px;
-  border-radius: 50%; /* Creates a circular hover area */
   cursor: pointer;
   display: flex;
   align-items: center;
