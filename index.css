@@ -20,7 +20,6 @@ body {
 
 }
 .container{
-
 padding:10px;
 
 }
@@ -43,7 +42,7 @@ nav p{
 }
 
 .filter {
-    background-color: #2A2A2A;
+    background-color: #fff;
     padding: 15px;
     border-radius: 8px;
     z-index: -5;
@@ -51,8 +50,8 @@ nav p{
 }
 
 .toggle {
-    background-color: #1A1A1A;
-    color: #D3D3D3;
+    background-color: transparent;
+    color: #0000;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
