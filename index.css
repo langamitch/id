@@ -16,7 +16,7 @@ body {
   width:fit-content;
 }
 
-#loading-indicator {
+#loading-indicator p{
   paddding: 20px;
   background:#fff;}
 
