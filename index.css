@@ -42,15 +42,80 @@ nav p{
     cursor: pointer;
 }
 
-.toggle{
-    border-radius: 40px;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    background-color: #141414;
-    padding: 20px 17px 20px 15px;
+.filter {
+    background-color: #2A2A2A;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
+.toggle {
+    background-color: #1A1A1A;
+    color: #D3D3D3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.toggle:hover {
+    background-color: #333333;
+}
+
+.sort-section {
+    text-align: center;
+}
+
+.sort-label {
+    color: #D3D3D3;
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.sort-label::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #808080;
+}
+
+.sort-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sort-option {
+    background-color: #1A1A1A;
+    color: #D3D3D3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.sort-option:hover {
+    background-color: #2A2A2A;
+}
+
+.sort-option.active {
+    background-color: #2A2A2A;
+}
+
+.sort-option::before {
+    content: attr(data-check);
+    margin-right: 5px;
 }
 
 * ========== Hero Wrapper ========== */
