@@ -50,19 +50,38 @@ function listenForPosts() {
       postContainer.innerHTML = ""; // Clear previous posts
       snapshot.forEach((doc) => {
         const post = doc.data();
+        const postId = doc.id; // Unique ID for the post
         const postCard = document.createElement("div");
         
         postCard.className = "post-card";
-        postCard.innerHTML = `<div onclick="window.open('${
-          post.socialLink || "#"
-        }', '_blank')" class="top"><div class="profilepic"></div>
-                <div class="profile" onclick="window.open('${
-                  post.socialLink || "#"
-                }', '_blank')">${post.name || "Unknown"} </div></div>
+        postCard.innerHTML = `
+          <div class="top" onclick="window.open('${post.socialLink || '#'}', '_blank')">
+            <div class="profilepic"></div>
+            <div class="profile">${post.name || "Unknown"}</div>
+          </div>
 
-                <div class="content">${post.suggestion || ""}</div>
-               
-            `;
+          <div class="content">${post.suggestion || ""}</div>
+
+          <div class="post-actions">
+            <div class="action-group">
+              <button class="action-btn" onclick="likePost(this, '${postId}')" aria-label="Like">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                    <path d="M12.781 2.375c.383-1.29 2.055-1.29 2.438 0l1.218 4.114c.13.44.532.748 1 .748h4.328c1.32 0 1.874 1.703.813 2.51l-3.499 2.544c-.38.275-.56.75-.43 1.19l1.218 4.114c.383 1.29-1.045 2.438-2.106 1.624l-3.5-2.544c-.38-.275-.87-.275-1.25 0l-3.499 2.544c-1.06.814-2.489-.334-2.106-1.624l1.218-4.114c.13-.44-.05-.885-.43-1.19L1.99 9.747C.93 8.94.375 7.237 1.695 7.237h4.328c.468 0 .87-.308 1-.748l1.218-4.114z" />
+                </svg>
+              </button>
+              <button class="action-btn" onclick="dislikePost(this, '${postId}')" aria-label="Dislike">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                    <path d="M11.219 21.625c-.383 1.29-2.055 1.29-2.438 0l-1.218-4.114a1.249 1.249 0 0 0-1-.748H2.235c-1.32 0-1.874-1.703-.813-2.51l3.499-2.544c.38-.275.56-.75.43-1.19l-1.218-4.114c-.383-1.29 1.045-2.438 2.106-1.624l3.5 2.544c.38.275.87.275 1.25 0l3.499-2.544c1.06-.814 2.489.334 2.106 1.624l-1.218 4.114c-.13.44.05.885.43 1.19l3.499 2.544c1.06.814.506 2.51-.813 2.51h-4.328a1.249 1.249 0 0 0-1-.748l-1.218-4.114z" />
+                </svg>
+              </button>
+            </div>
+            <button class="action-btn save-btn" onclick="savePost(this, '${postId}')" aria-label="Save">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                  <path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1z" />
+              </svg>
+            </button>
+          </div>
+        `;
 
         postContainer.appendChild(postCard);
       });
@@ -72,6 +91,11 @@ function listenForPosts() {
     }
   );
 }
+
+
+
+
+
 
 function searchPosts() {
   const searchTerm = searchInput.value.toLowerCase();
