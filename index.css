@@ -43,8 +43,9 @@ nav p{
 
 .togglebtn {
   background: #fff;
-  padding: 10px 0px;
+  padding: 0px 10px;
   }
+  
 .right{
   display: flex;
   flex-direction:  row;
