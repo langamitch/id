@@ -35,7 +35,40 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}.section {
+  text-align: center;
+  color: white;
+  background: #111;
+  font-family: Inter, sans-serif;
+  padding: 30px 0;
 }
+
+.avatars {
+  display: flex;
+  justify-content: center;
+  gap: -10px;
+  margin-bottom: 10px;
+}
+
+.avatars img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #111;
+  margin-left: -10px;
+}
+
+.main-text {
+  font-size: 18px;
+  margin: 0;
+}
+
+.sub-text {
+  font-size: 15px;
+  color: #ccc;
+}
+
+
 
 :root {
   --clr-bg: #000;        /* pure black */
