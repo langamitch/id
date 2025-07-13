@@ -41,7 +41,7 @@ nav p{
     cursor: pointer;
 }
 .rotate-45 {
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 .togglebtn {
   background: #fff;
