@@ -78,17 +78,22 @@ html, body {
 
 }
 
+ }
+
     .ad-container {
       position: relative;
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 9; /* Maintain good ratio */
-      background-image: url('22B4C65C-5164-460C-B6CE-35C3E92A1061.gif'); /* Replace with your GIF */
+      background-image: url('22B4C65C-5164-460C-B6CE-35C3E92A1061.gif'); /* replace with your GIF path */
       background-size: cover;
       background-position: center;
+      border-radius: 0px;
       overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      font-weight:500;
       color: white;
-    }
+      aspect-ratio: 16/9;
+    } 
 
     .visit-advertiser {
       position: absolute;
