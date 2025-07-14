@@ -77,7 +77,8 @@ body {
       background-position: center;
       border-radius: 8px;
       overflow: hidden;
-      font-family: sans-serif;
+      font-family: 'Inter', sans-serif;
+      font-weight:500;
       color: white;
     }
 
@@ -86,7 +87,6 @@ body {
       top: 10px;
       right: 12px;
       font-size: 14px;
-      background: rgba(0, 0, 0, 0.6);
       padding: 4px 8px;
       border-radius: 4px;
       cursor: pointer;
@@ -97,7 +97,8 @@ body {
       bottom: 10px;
       left: 12px;
       font-size: 12px;
-      background: rgba(0, 0, 0, 0.5);
+      font-weight:500;
+      background: var(--clr-glass);
       padding: 3px 6px;
       border-radius: 4px;
     }
