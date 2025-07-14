@@ -76,22 +76,19 @@ html, body {
 
     }
 
+}
+
     .ad-container {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: auto;
+      aspect-ratio: 16 / 9; /* Maintain good ratio */
+      background-image: url('your-ad.gif'); /* Replace with your GIF */
+      background-size: cover;
+      background-position: center;
       overflow: hidden;
       color: white;
     }
-
-    .ad-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-  
 
     .visit-advertiser {
       position: absolute;
