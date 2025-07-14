@@ -7,10 +7,15 @@ body {
     font-weight: 500;
 }
 
-/* HTML: <div class="loader"></div> */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .loader {
   display: inline-flex;
   gap: 10px;
+  margin:auto;
 }
 .loader:before,
 .loader:after {
