@@ -93,11 +93,12 @@ html, body {
       position: absolute;
       top: 10px;
       right: 12px;
-      font-size: 14px;
+      font-size: 12px;
       padding: 4px 8px;
-      border-radius: 4px;
+      border-radius: 49px;
+      background-color: var(--clr-glass);
       cursor: pointer;
-      
+      font-weight:500;
     }
 
     .sponsored {
