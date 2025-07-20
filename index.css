@@ -376,6 +376,7 @@ input, button {
     display: flex-end;
     flex-direction: row;
     font-size: 13px;
+    font-weight:500;
 }
 
 .content {
