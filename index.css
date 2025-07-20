@@ -153,6 +153,9 @@ nav p{
     color: white;
     cursor: pointer;
 }
+#search-input input{
+  outline:none;
+
 .rotate-45 {
   transform: rotate(-45deg);
 }
