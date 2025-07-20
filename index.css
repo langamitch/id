@@ -75,12 +75,6 @@ html, body {
   color: #ccc;
 }
 
-    }
-
-}
-
- }
-
     .ad-container {
       position: relative;
       width: 100%;
@@ -155,7 +149,7 @@ nav p{
 }
 #search-input input{
   outline:none;
-
+}
 .rotate-45 {
   transform: rotate(-45deg);
 }
