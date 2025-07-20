@@ -307,9 +307,6 @@ nav p{
     font-size: 16px;
 }
 
-input:focus  {
-    outline: none;
-}
 #suggestion-form input{
     height: 50px;
 }
@@ -324,6 +321,10 @@ input:focus  {
 }
 .close-btn {
     position: absolute;
+    background-color:#000;
+    border-radius:8px;
+    width:40px;
+    height:50px;
     top: 10px;
     right: 10px;
     font-size: 20px;
@@ -339,6 +340,7 @@ input, textarea {
     padding: 10px;
     font-weight: 500;
     font-size: 16px;
+    border-radius:18px;
 }
 input, button {
     font-weight: 500;
